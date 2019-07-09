@@ -27,7 +27,7 @@ public class TrainerDao {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USERNAME, PASS);
-        } catch (SQLException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(CourseDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conn;
